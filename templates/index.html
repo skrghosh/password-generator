@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+        <h1>Secure Password Generator</h1>
+        <input id="password" type="text" readonly>
+
+        <!-- Include Uppercase Letters -->
+            <div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-uppercase" class="checkbox-input" checked>
+                    <label for="include-uppercase" class="checkbox-label">Include Uppercase Letters</label>
+                </div>
+            </div>
+
+            <div>
+                <!-- Include Lowercase Letters -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-lowercase" class="checkbox-input" checked>
+                    <label for="include-lowercase" class="checkbox-label">Include Lowercase Letters</label>
+                </div>
+            </div>
+
+            <div>
+                <!-- Include Numbers -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-numbers" class="checkbox-input" checked>
+                    <label for="include-numbers" class="checkbox-label">Include Numbers</label>
+                </div>
+            </div>
+
+            <div>
+                <!-- Include Symbols -->
+                <div class="checkbox-container">
+                    <input type="checkbox" id="include-symbols" class="checkbox-input" checked>
+                    <label for="include-symbols" class="checkbox-label">Include Symbols</label>
+                </div>
+            </div>
+
+
+        <div>
+            <label for="password-length">Password Length:</label>
+                <input type="range" id="password-length" name="password-length" min="8" max="128" value="12">
+                <span id="password-length-display">12</span>
+        </div>
+
+        <button id="generate-password" type="button">Generate Password</button>
+        <div class="password-strength-meter">
+            <div id="password-strength-bar"></div>
+        </div>
+        <button id="copy-password" type="button">Copy Password</button>
+        <span id="copy-message" class="hidden">Copied!</span>
+
+
+<!-- Avoid similar characters -->
+    <div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="include-similar" class="checkbox-input" checked>
+            <label for="include-similar" class="checkbox-label">Avoid Similar Characters</label>
+        </div>
+    </div>
+
+<!-- Avoid ambiguous characters -->
+    <div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="include-ambiguous" class="checkbox-input" checked>
+            <label for="include-ambiguous" class="checkbox-label">Avoid Ambiguous Characters </label>
+        </div>
+    </div>
+
+<!-- Disallow repeated characters -->
+    <div>
+        <div class="checkbox-container">
+            <input type="checkbox" id="include-repeated" class="checkbox-input" checked>
+            <label for="include-repeated" class="checkbox-label">Avoid Repeated Characters </label>
+        </div>
+    </div>
+
+
+    </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

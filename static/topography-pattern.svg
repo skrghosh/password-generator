@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 160 160" preserveAspectRatio="none">
+  <g stroke-width="10" stroke="#000000" opacity="0.05">
+    <path d="M160 0l-160 160m160 0l-160 -160"/>
+    <path d="M20 0l0 160m60 0l0 -160m60 0l0 160"/>
+    <path d="M0 20l160 0m0 60l-160 0m0 60l160 0"/>
+  </g>
+</svg>
